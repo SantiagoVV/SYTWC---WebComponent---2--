@@ -1,0 +1,40 @@
+<body>
+ <mat-card *ngFor="let item of list" class="example-card">
+    <mat-card-header>
+    <!--  <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title>{{item.Nombre}}</mat-card-title>
+      <mat-card-subtitle>{{item.Especie}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src= {{item.imagen}} alt="Falta imagen del animal" class="img-responsive" >
+    <mat-card-content>
+     
+      <div *ngIf="boton_cambio == 1" class = "center">
+        <p> {{item.RefTitulo}} </p>
+        <p> {{item.RefNombre}} </p>
+        <p> {{item.RefAno}} </p>
+        <p> {{item.RefUbicacion}} </p>
+      </div>
+
+      <div *ngIf="boton_cambio == 2" class = "center"> 
+        <p> Reino : {{item.Reino}}</p>
+        <p> Filo : {{item.Filo}}</p>
+        <p> Clases : {{item.Clases}}</p>
+        <p> Orden : {{item.Orden}}</p>
+        <p> Familia : {{item.Familia}}</p>
+        <p> Género : {{item.Genero}}</p>
+        <p> Especie : {{item.Especie}}</p>
+      </div>
+         
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="cambio(1)" mat-button >Referencias</button>
+      <button (click)="cambio(2)" mat-button >Taxonomía</button> 
+    </mat-card-actions>
+  </mat-card>
+</body>
+
+
+
+
+
+  <!-- https://material.angular.io/components/card/overview -->

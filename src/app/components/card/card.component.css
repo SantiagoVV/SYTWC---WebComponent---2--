@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 400px;
+    float: left;
+    border-radius: 20px;
+    margin: 20px auto;
+    margin-left: 8%;
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+
+  body {
+    background-color: #0f3c4c;
+  }
+
+  .center{
+    text-align: center;
+  }
